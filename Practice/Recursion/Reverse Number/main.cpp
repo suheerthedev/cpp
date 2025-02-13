@@ -11,8 +11,7 @@ int reverseNumber(int n, int rev = 0){
     if(n == 0){
         return rev;
     }
-    int digit = n % 10;
-    rev = rev * 10 + digit;
+    rev = rev * 10 + (n % 10);
     return reverseNumber(n/10, rev);
 }
 
