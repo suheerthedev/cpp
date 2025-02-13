@@ -13,8 +13,8 @@ int power(int base, int exp, int result,int i = 1){
 
 //direct implementation
 int power1(int base, int exp){
-    if(exp == 0){
-        return 1;
+    if(exp == 1){
+        return base;
     }
 
     return base * power1(base, exp-1);
