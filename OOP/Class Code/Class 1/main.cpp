@@ -11,10 +11,12 @@ public:
 
 class Room
 {
-public:
+private:
     float length;
     float breadth;
     float height;
+
+public:
     float calculateArea()
     {
         return length * breadth;
@@ -23,14 +25,26 @@ public:
     {
         return length * breadth * height;
     }
+    float setLength(float l)
+    {
+        length = l;
+    }
+    float setBreadth(float b)
+    {
+        breadth = b;
+    }
+    float setHeight(float h)
+    {
+        height = h;
+    }
 };
 
 int main()
 {
     Room r1;
-    r1.height = 10;
-    r1.breadth = 10;
-    r1.length = 10;
+    r1.setHeight(10);
+    r1.setBreadth(10);
+    r1.setLength(10);
 
     cout << r1.calculateArea() << endl;
     return 0;
