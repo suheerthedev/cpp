@@ -11,6 +11,8 @@ public:
 
 class Room
 {
+    protected:
+        string str;
 private:
     float length;
     float breadth;
@@ -39,12 +41,27 @@ public:
     }
 };
 
+class Table: public Room{
+    public:
+    void setString(string str1){
+        str = str1;
+    }
+    void print(){
+        cout<<str<<endl;
+    }
+};
+
 int main()
 {
     Room r1;
+    Table t1;
     r1.setHeight(10);
     r1.setBreadth(10);
     r1.setLength(10);
+
+    t1.setString("Protected");
+    t1.print();
+    
 
     cout << r1.calculateArea() << endl;
     return 0;
