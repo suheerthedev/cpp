@@ -51,6 +51,26 @@ class Table: public Room{
     }
 };
 
+class Base{
+
+    public:
+        int x;
+    protected:
+    int y;
+    private:
+    int z;
+
+}
+;
+
+class Child public: Base{
+    public:
+        int a;
+    protected:
+    int b;
+    private:
+    int c;
+}
 int main()
 {
     Room r1;
